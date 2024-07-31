@@ -1,0 +1,78 @@
+body {
+    font-family: 'Gaegu', cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #fbefd6;
+    color: #333;
+}
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    font-family: 'Slackey', cursive;
+    color: #fb8b3c;
+    font-size: 2.5rem;
+}
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+input[type="number"] {
+    max-width: 60px;
+    padding: 10px;
+    background-color: #ede5d3;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.4rem;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+    background-color: #ff5c16;
+    color: #fbefd6;
+}
+button:hover {
+    background-color: #fb8b3c;
+}
+#result {
+    font-family: 'Slackey', cursive;
+    font-size: 2rem;
+    color: #00afb3;
+    margin-top: 20px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

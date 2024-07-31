@@ -18,11 +18,12 @@ function calculateHours() {
     }
 
     const remainingTickets = goalTickets - collectedTickets;
-    const hoursPerDay = remainingTickets / remainingDays;
+    const exactHoursPerDay = remainingTickets / remainingDays;
+    const roundedHoursPerDay = Math.ceil(exactHoursPerDay);
 
     if (remainingDays === 0) {
         result.innerText = "Today is the last day! You need to code all remaining hours today!";
     } else {
-        result.innerText = `You need to code ${hoursPerDay.toFixed(2)} hours per day to reach your goal.`;
+        result.innerHTML = `You need to code <span class="tooltip" style="font-size: 2.5rem; color: #00afb3;">${roundedHoursPerDay}<span class="tooltiptext">${exactHoursPerDay.toFixed(2)}</span></span> hours per day to reach your goal.`;
     }
 }
