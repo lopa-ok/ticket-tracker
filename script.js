@@ -1,3 +1,12 @@
+function setGoalFromItem() {
+    const itemSelect = document.getElementById('itemSelect');
+    const goalTickets = document.getElementById('goalTickets');
+
+    if (itemSelect.value) {
+        goalTickets.value = itemSelect.value;
+    }
+}
+
 function calculateHours() {
     const goalTickets = parseInt(document.getElementById('goalTickets').value);
     const collectedTickets = parseInt(document.getElementById('collectedTickets').value);
@@ -26,4 +35,14 @@ function calculateHours() {
     } else {
         result.innerHTML = `You need to code <span class="tooltip" style="font-size: 2.5rem; color: #00afb3;">${roundedHoursPerDay}<span class="tooltiptext">${exactHoursPerDay.toFixed(2)}</span></span> hours per day to reach your goal.`;
     }
+}
+
+function addTicket() {
+    const collectedTickets = document.getElementById('collectedTickets');
+    collectedTickets.value = parseInt(collectedTickets.value) + 1;
+}
+
+function removeTicket() {
+    const collectedTickets = document.getElementById('collectedTickets');
+    collectedTickets.value = Math.max(0, parseInt(collectedTickets.value) - 1);
 }

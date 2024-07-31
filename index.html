@@ -18,7 +18,41 @@
         <input type="number" id="goalTickets" required>
         <br>
         <label for="collectedTickets">Collected Tickets:</label>
-        <input type="number" id="collectedTickets" required>
+        <div class="inline-container">
+            <button onclick="removeTicket()">-1 Ticket</button>
+            <input type="number" id="collectedTickets" required>
+            <button onclick="addTicket()">+1 Ticket</button>
+        </div>
+        <br>
+        <label for="itemSelect">Or select an item:</label>
+        <select id="itemSelect" onchange="setGoalFromItem()">
+            <option value="">Select an item</option>
+            <option value="14">Pinecil (14 tickets)</option>
+            <option value="15">YubiKey 5C NFC (15 tickets)</option>
+            <option value="15">GitHub Keycaps (15 tickets)</option>
+            <option value="15">Octocat Plushie (15 tickets)</option>
+            <option value="18">Tuxedo pick set + clear training lock (18 tickets)</option>
+            <option value="25">Leatherman Skeletool (25 tickets)</option>
+            <option value="25">Wacom Intuos S (25 tickets)</option>
+            <option value="25">Logitech MX Anywhere 2S (25 tickets)</option>
+            <option value="50">Keychron K6 Pro (50 tickets)</option>
+            <option value="55">Ryobi Rotary Tool Kit (55 tickets)</option>
+            <option value="55">Ryobi 4 Tool Combo Kit (55 tickets)</option>
+            <option value="59">Samsung T7 1TB SSD (59 tickets)</option>
+            <option value="70">Invertocat Backpack (70 tickets)</option>
+            <option value="70">Flipper Zero (70 tickets)</option>
+            <option value="75">Logitech MX Mechanical (75 tickets)</option>
+            <option value="90">Wacom One display (90 tickets)</option>
+            <option value="120">Nvidia Tesla P40 GPU (120 tickets)</option>
+            <option value="130">Prusa MINI+ (130 tickets)</option>
+            <option value="135">Bambu Lab A1 mini (135 tickets)</option>
+            <option value="140">AirPods Pro 2nd gen (140 tickets)</option>
+            <option value="160">iPad 10th Gen + Apple Pencil (160 tickets)</option>
+            <option value="168">ThinkPad T490 (168 tickets)</option>
+            <option value="200">Quest 3 (200 tickets)</option>
+            <option value="280">RTX 3090 (280 tickets)</option>
+            <option value="400">MacBook Air M2 (400 tickets)</option>
+        </select>
         <br>
         <button onclick="calculateHours()">Calculate</button>
         <p id="result"></p>
